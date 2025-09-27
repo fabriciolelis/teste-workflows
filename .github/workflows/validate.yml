@@ -1,6 +1,6 @@
 name: Validate container
 
-on: push
+on: workflow_dispatch
 
 jobs:
   test-container:

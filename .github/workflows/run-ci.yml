@@ -1,0 +1,17 @@
+name: Run CI
+
+on: [push, pull_request] # Executa sobre duas condicões: Em todos os commits ou se um PR for criado
+
+jobs:
+  step_default_ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run normal CI
+        run: echo "Indepedente do tipo de trigger, esse step será executado"
+
+  pull_request_ci:
+    runs-on: ubuntu-latest
+    if: ${{github.event_name == 'pull_request'}} # Executa apenas quando on = pull_request
+    steps:
+      - name: Run PR only CI
+        run: echo "Para passar nesse step, o trigger do workflow precisa ser Pull request"
