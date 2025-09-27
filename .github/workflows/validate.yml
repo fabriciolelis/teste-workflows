@@ -1,0 +1,10 @@
+name: Validate container
+
+on: push
+
+jobs:
+  test-container:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Scan vulnerability"
+      - run: echo "Scan de Hadolint"
