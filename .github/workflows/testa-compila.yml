@@ -1,0 +1,14 @@
+name: Testa Compila
+
+on: push
+
+jobs:
+    build-commit:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "Nova build"
+    
+    test-commit:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "Testa nova build"
